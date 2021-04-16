@@ -28,6 +28,7 @@ public class CurrencyConversionController {
 			) {
 		
 		//CHANGE-KUBERNETES
+		// more logs
 		logger.info("calculateCurrencyConversion called with {} to {} with {}", from, to, quantity);
 		
 		HashMap<String, String> uriVariables = new HashMap<>();

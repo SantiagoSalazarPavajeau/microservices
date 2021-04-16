@@ -24,6 +24,14 @@ You can reuse these images instead of creating and pushing new container images
 
 #### Commands
 ```
+kind create cluster
+kubectl cluster-info --context kind-kind
+kubectl create deployment currency-exchange --image=santispavajeau/mmv2-currency-exchange-service:0.0.11-SNAPSHOT
+kubectl expose deployment currency-exchange --type=LoadBalancer --port=8000
+kubectl get svc 
+kubectl get pods 
+kubectl get rs
+kubectl get all
 
 docker run -p 8080:8080 in28min/hello-world-rest-api:0.0.1.RELEASE
 
